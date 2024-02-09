@@ -5,6 +5,7 @@
 	</head>
 	<body>
 		<h2>Transaction History</h2>
+		<div class="table-container">
 		<table>
 			<tr>
 				<th>ID</th>
@@ -22,5 +23,6 @@
 				<td th:unless="${storedTransaction.type eq 'D'}"></td>
 			</tr>
 		</table>
+		</div>
 	</body>
 </html>
