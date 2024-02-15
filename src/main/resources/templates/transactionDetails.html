@@ -7,7 +7,7 @@
     <body>
         <h1 th:text="'Transaction ID: ' + ${transaction?.id} + ' (' + (${transaction?.type eq 'C'} ? 'Credit' : 'Debit') + ')'" ></h1>
         <div><strong>Date: </strong><span th:text="${transaction?.date}"></span></div>
-        <div><strong>Amount: </strong><span th:inline="text"><span th:unless="${transaction.type eq 'C'}">- </span>[[${transaction.amount}]]</span></div>
+        <div><strong>Amount: </strong><span th:inline="text"><span th:unless="${transaction.type eq 'D'}">- </span>[[${transaction.amount}]]</span></div>
         <div><strong>Description: </strong><span th:text="${transaction?.description}"></span></div>
         <p><a th:href="@{/transactions}">Back</a></p>
     </body>
